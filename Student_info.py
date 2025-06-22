@@ -91,8 +91,101 @@ universite = [
     }
 ]
 
+students_extra_information = [
+    {
+        "student_name": "Alex", 
+        "student_city":        "             Riga",
+        "student_sport":         "               Football",
+        "student_colour" :          "                 Blue"
+    },
+    {
+        "student_name": "Pedro", 
+        "student_city":        "            Rio",
+        "student_sport":         "                Basketball",
+        "student_colour" :          "               Yellow"
+    },
+    {
+        "student_name": "Martha", 
+        "student_city":        "           Barcelona",
+        "student_sport":         "          Tennis",
+        "student_colour" :             "                   Brown"
+    },
+    {
+        "student_name": "Emily", 
+        "student_city":        "            Berlin",
+        "student_sport":         "             Volleyball",
+        "student_colour" :            "               Pink"
+    },
+    {
+        "student_name": "Isabell", 
+        "student_city":        "          Prague",
+        "student_sport":         "             Volleyball",
+        "student_colour" :             "               Pink"
+    },
+    {
+        "student_name": "Ali", 
+        "student_city":        "              Antalya",
+        "student_sport":         "            Football",
+        "student_colour" :              "                 Purple"
+    },
+    {
+        "student_name": "Felix", 
+        "student_city":        "            Helsinki",
+        "student_sport":         "           Football",
+        "student_colour" :             "                 Orange"
+    },
+    {
+        "student_name": "Leo", 
+        "student_city":        "              Stockholm",
+        "student_sport":         "          Football",
+        "student_colour" :          "                 Blue"
+    },
+    {
+        "student_name": "Elizabeth", 
+        "student_city":                "        Malmo",
+        "student_sport":         "              Tennis",
+        "student_colour" :              "                   Red"
+    },
+    {
+        "student_name": "Valdez", 
+        "student_city":        "           New York",
+        "student_sport":         "           Tennis",
+        "student_colour" :                 "                   Blue"
+    },
+    {
+        "student_name": "Violet", 
+        "student_city":        "           Budapest",
+        "student_sport":         "           Table Tennis",
+        "student_colour" :                    "             Pink"
+    },
+    {
+        "student_name": "Natalie", 
+        "student_city":        "          Warsaw",
+        "student_sport":         "             Swimming",
+        "student_colour" :            "                 Purple"
+    },
+    {
+        "student_name": "Katarina", 
+        "student_city":           "         Frankfurt",
+        "student_sport":         "          Tennis",
+        "student_colour" :            "                   Gray"
+    },
+    {
+        "student_name": "Luca", 
+        "student_city":        "             Milan",
+        "student_sport":         "              Skiing",
+        "student_colour" :          "                   Black"
+    },
+    {
+        "student_name": "Hazel", 
+        "student_city":        "            Madrid",
+        "student_sport":         "             Skating",
+        "student_colour" :           "                  Green"
+    }
+]
 print("")
-print("Student_name     Student_age       Student_course           Student_lecture_note")
+
+print("Student_name     Student_age       Student_course      Student_lecture_note")
 print("")
 
 for university in universite:
@@ -107,3 +200,11 @@ print("")
 Not_ortalaması = [56, 60, 70, 68, 45, 40, 65, 30, 90, 80, 70, 92, 95, 70, 69]
 
 print("Not Ortalaması: ", sum(Not_ortalaması)/len(Not_ortalaması))
+print("")
+
+print("-------------")
+print("Student_name     Student_city       Student_sport           Student_colour")
+print("")
+
+for students in students_extra_information:
+    print(students["student_name"], students["student_city"], students["student_sport"], students["student_colour"])
