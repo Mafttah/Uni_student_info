@@ -306,8 +306,8 @@ students_family_info = [
     { 
         "student_name": "Luca", 
         "father_name":        "            Percy",
-        "father_job":       "    Artificial Intelligence",
-        "mother_name" :     " Amelia",
+        "father_job":       "       AI",
+        "mother_name" :     "                   Amelia",
         "mother_job" :                "        Doctor",
         "sibling(s)_name": "              Emmet, Julian, Elliot"  ,
         "sibling(s)_age" :          "    19, 22, 26",
@@ -344,6 +344,9 @@ for students in students_family_info:
    print(students["student_name"], students["father_name"], students["father_job"], students["mother_name"], students["mother_job"], students["sibling(s)_name"], students ["sibling(s)_age"])
 print("")
 
+# ToDo: Yaş ortalaması değerlerini for ile al.
+#       Bu güncelleme için localde yeni bir feature bir branch aç, sonra yeni branch' da komutlarla Github' a gönder.
+# round kullan
 Yas_ortalaması = [22, 25, 21, 23, 19, 22, 22, 19, 26, 27, 25, 18, 28, 29, 30]
 
 print("Yaş Ortalaması: ", sum(Yas_ortalaması)/len(Yas_ortalaması))
