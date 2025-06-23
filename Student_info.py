@@ -1,4 +1,4 @@
-universite = [ 
+universities = [ 
     {  
         "student_name": "Alex",
         "student_age":                  "                22" ,
@@ -323,8 +323,25 @@ students_family_info = [
     }
 ]
 
-for university in universite:
+
+print("Student_name     Student_age       Student_course           Student_lecture_note")
+print("--------------------------------------------------------------------------------")
+for university in universities:
     print(university["student_name"], university["student_age"], university["student_course"], university["student_lecture_note"])
+print("")
+
+print("")
+print("Student_name     Student_city       Student_sport           Student_colour")
+print("-----------------------------------------------------------------------------")
+
+for students in students_extra_information:
+    print(students["student_name"], students["student_city"], students["student_sport"], students["student_colour"])
+print("")
+
+print("Student_name  Father_name     Father_job         Mother_name      Mother_job            Sibling(s)_Name         Sibling(s)_age")
+print("------------------------------------------------------------------------------------------------------------------------------")
+for students in students_family_info:
+   print(students["student_name"], students["father_name"], students["father_job"], students["mother_name"], students["mother_job"], students["sibling(s)_name"], students ["sibling(s)_age"])
 print("")
 
 Yas_ortalaması = [22, 25, 21, 23, 19, 22, 22, 19, 26, 27, 25, 18, 28, 29, 30]
@@ -336,16 +353,3 @@ Not_ortalaması = [56, 60, 70, 68, 45, 40, 65, 30, 90, 80, 70, 92, 95, 70, 69]
 
 print("Not Ortalaması: ", sum(Not_ortalaması)/len(Not_ortalaması))
 print("")
-
-print("-------------")
-print("Student_name     Student_city       Student_sport           Student_colour")
-print("")
-
-for students in students_extra_information:
-    print(students["student_name"], students["student_city"], students["student_sport"], students["student_colour"])
-print("-------------")
-
-print("Student_name  Father_name     Father_job         Mother_name      Mother_job            Sibling(s)_Name         Sibling(s)_age")
-
-for students in students_family_info:
-   print(students["student_name"], students["father_name"], students["father_job"], students["mother_name"], students["mother_job"], students["sibling(s)_name"], students ["sibling(s)_age"])
