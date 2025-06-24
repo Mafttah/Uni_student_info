@@ -347,12 +347,31 @@ print("")
 # ToDo: Yaş ortalaması değerlerini for ile al.
 #       Bu güncelleme için localde yeni bir feature bir branch aç, sonra yeni branch' da komutlarla Github' a gönder.
 # round kullan
-Yas_ortalaması = [22, 25, 21, 23, 19, 22, 22, 19, 26, 27, 25, 18, 28, 29, 30]
+# Yas_ortalaması = [22, 25, 21, 23, 19, 22, 22, 19, 26, 27, 25, 18, 28, 29, 30]
 
-print("Yaş Ortalaması: ", sum(Yas_ortalaması)/len(Yas_ortalaması))
-print("")
+# print("Yaş Ortalaması: ", sum(Yas_ortalaması)/len(Yas_ortalaması))
+# print("")
 
-Not_ortalaması = [56, 60, 70, 68, 45, 40, 65, 30, 90, 80, 70, 92, 95, 70, 69]
+# Not_ortalaması = [56, 60, 70, 68, 45, 40, 65, 30, 90, 80, 70, 92, 95, 70, 69]
 
-print("Not Ortalaması: ", sum(Not_ortalaması)/len(Not_ortalaması))
-print("")
+# print("Not Ortalaması: ", sum(Not_ortalaması)/len(Not_ortalaması))
+# print("")
+
+
+
+# Yeni versiyon age for ile alınıyor. 
+students_age = 0 
+for student_age in universities:
+    students_age += int(student_age["student_age"])
+
+print("Students age average: ", round(students_age/len(universities)))
+
+students_note = 0
+for student_lecture_note in universities:
+    students_note += int(student_lecture_note["student_lecture_note"])
+
+print("Student note average: ", round(students_note/len(universities)))
+
+
+
+
