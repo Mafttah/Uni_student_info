@@ -324,25 +324,25 @@ students_family_info = [
 ]
 
 
-print("Student_name     Student_age       Student_course           Student_lecture_note")
-print("--------------------------------------------------------------------------------")
-for university in universities:
-    print(university["student_name"], university["student_age"], university["student_course"], university["student_lecture_note"])
-print("")
+# print("Student_name     Student_age       Student_course           Student_lecture_note")
+# print("--------------------------------------------------------------------------------")
+# for university in universities:
+#     print(university["student_name"], university["student_age"], university["student_course"], university["student_lecture_note"])
+# print("")
 
-print("")
-print("Student_name     Student_city       Student_sport           Student_colour")
-print("-----------------------------------------------------------------------------")
+# print("")
+# print("Student_name     Student_city       Student_sport           Student_colour")
+# print("-----------------------------------------------------------------------------")
 
-for students in students_extra_information:
-    print(students["student_name"], students["student_city"], students["student_sport"], students["student_colour"])
-print("")
+# for students in students_extra_information:
+#     print(students["student_name"], students["student_city"], students["student_sport"], students["student_colour"])
+# print("")
 
-print("Student_name  Father_name     Father_job         Mother_name      Mother_job            Sibling(s)_Name         Sibling(s)_age")
-print("------------------------------------------------------------------------------------------------------------------------------")
-for students in students_family_info:
-   print(students["student_name"], students["father_name"], students["father_job"], students["mother_name"], students["mother_job"], students["sibling(s)_name"], students ["sibling(s)_age"])
-print("")
+# print("Student_name  Father_name     Father_job         Mother_name      Mother_job            Sibling(s)_Name         Sibling(s)_age")
+# print("------------------------------------------------------------------------------------------------------------------------------")
+# for students in students_family_info:
+#    print(students["student_name"], students["father_name"], students["father_job"], students["mother_name"], students["mother_job"], students["sibling(s)_name"], students ["sibling(s)_age"])
+# print("")
 
 # ToDo: Yaş ortalaması değerlerini for ile al.
 #       Bu güncelleme için localde yeni bir feature bir branch aç, sonra yeni branch' da komutlarla Github' a gönder.
@@ -364,14 +364,63 @@ students_age = 0
 for student_age in universities:
     students_age += int(student_age["student_age"])
 
-print("Students age average: ", round(students_age/len(universities)))
+print("Students age average:", round(students_age/len(universities)))
 
 students_note = 0
 for student_lecture_note in universities:
     students_note += int(student_lecture_note["student_lecture_note"])
 
-print("Student note average: ", round(students_note/len(universities)))
+print("Student note average:", round(students_note/len(universities)))
+print("")
 
 
+#print(f"Student note average: {round(students_note/len(universities))}")
+
+#name_surname = "Bora Saglam" 
+#identity_number = 24334361590
+
+# standart kullanım: 
+
+#print("Kimlik numarası: ", identity_number, "Adı Soyadı: ", name_surname)
+
+# f string ile kullanım
+
+#print(f"Kimlik numarası: {identity_number} Adı Soyadı: {name_surname}")
+
+print(f"{'Student_name':<15} {'Student_age':^15} {'Student_course':<30} {'Student_note':^15}")
+
+print(f"{'------------':<15} {'--------------':^15} {'--------------':<30} {'--------------':^15}")
+#print(f"{'age':<9}")
+# 123456789
+# age
+
+for university in universities:
+    print(f"{(university["student_name"]).strip():<15} {(university["student_age"]).strip():^15} {(university["student_course"]).strip():<30} {(university["student_lecture_note"]).strip():^15}")
+print("")
+
+print(f"{'Student_name':<15} {'Student_city':<12} {'Student_sport':<15} {'Student_colour':<15}")   
+
+print(f"{'------------':<15} {'-----------':<12} {'--------------':<15} {'--------------':<15}")
+
+for students in students_extra_information:
+    print(f"{(students["student_name"]).strip():<15} {(students["student_city"]).strip():<12} {(students["student_sport"]).strip():<15} {(students["student_colour"]).strip():<15}")
+print("")
+
+print(f"{'Student_name':<15} {'Father_name':<15} {'Father_job':<20} {'Mother_name':<15} {'Mother_job':<20} {'Sibling(s)_name':<30} {'Sibling(s)_age':<15}")
+
+print(f"{'---------------':<15} {'--------------':<15} {'--------------------':<20} {'--------------':<15} {'--------------------':20} {'------------------------------':<30} {'--------------':<15}")
+
+for students in students_family_info:
+    print(f"{(students["student_name"]).strip():<15} {(students["father_name"]).strip():<15} {(students["father_job"]).strip():<20} {(students["mother_name"]).strip():<15} {(students["mother_job"]).strip():<20} {(students["sibling(s)_name"]).strip():<30} {(students["sibling(s)_age"]).strip():<15}")
+
+
+
+
+
+# print("Student_name  Father_name     Father_job         Mother_name      Mother_job            Sibling(s)_Name         Sibling(s)_age")
+# print("------------------------------------------------------------------------------------------------------------------------------")
+# for students in students_family_info:
+#    print(students["student_name"], students["father_name"], students["father_job"], students["mother_name"], students["mother_job"], students["sibling(s)_name"], students ["sibling(s)_age"])
+# print("")
 
 
