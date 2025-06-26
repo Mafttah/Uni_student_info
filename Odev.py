@@ -746,11 +746,23 @@ print("")
 #         continue
 #     break
 
-print(Fore.RED + f"{'Name':<10} {'Surname':<12} {'Age':<15} {'City':<15} {'University':<25} {'Course':<12} {'Notes':<10} {'Hobbies':<15}")
-                    
 
+#print(Fore.WHITE + f"{'------':<10} {'-------':<15} {'-------':<12} {'----------':<15} {'----------------':<12} {'------------':<12} {'--------------':<12} {'----------':<15}") 
 
-print(Fore.WHITE + f"{'------':<10} {'-------':<15} {'-------':<12} {'----------':<15} {'----------------':<12} {'------------':<12} {'--------------':<12} {'----------':<15}") 
+#for students in student_list:
+#    print(f"{(students["student_name"]).strip():<10} {(students["student_surname"]).strip():<10} {(students["student_age"]).strip():<20} {(students["student_city"]).strip():<15} {(students["student_university"]).strip():<20} {(students["student_course"]).strip():<30} {(students["student_notes"]).strip():<15} {(students["student_hobbies"]).strip():<15}")
 
-for students in student_list:
-    print(f"{(students["student_name"]).strip():<10} {(students["student_surname"]).strip():<10} {(students["student_age"]).strip():<20} {(students["student_city"]).strip():<15} {(students["student_university"]).strip():<20} {(students["student_course"]).strip():<30} {(students["student_notes"]).strip():<15} {(students["student_hobbies"]).strip():<15}")
+students.append({
+        "Name": name,
+        "Surname": surname,
+        "Age": student_age,
+        "City": student_city,
+        "University": student_university,
+        "Course": student_course,
+        "Hobbies": ", ".join(student_hobbies)
+        })
+
+print(Fore.RED + f"{'Name':<10} {'Surname':<12} {'Age':<15} {'City':<20} {'University':<25} {'Course':<12} {'Notes':<10} {'Hobbies':<15}")
+
+for list in students:
+    print(Fore.WHITE + f"{list['Name']:<10} {list['Surname']:<12} {list['Age']:<15} {list['City']:<20} {list['University']:<25} {list['Course']:<12} {'Notes':<10} {list['Hobbies']:<15}")
