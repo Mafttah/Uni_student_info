@@ -35,7 +35,7 @@ while True:
     name = input("3. Name: ")
     name = input("4. Name: ")
     name = input("5. Name: ")
-    name = input("6. Name: ")
+    name = input("6. Name: ") 
     if name == "": 
         print(Fore.RED, "You cannot leave the name information blank !")
         print(Fore.WHITE, "Go Back")
